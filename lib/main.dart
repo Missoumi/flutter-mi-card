@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -35,46 +36,41 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.0,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
-                      '+213667099897',
-                      style: TextStyle(
-                          color: Colors.teal.shade800, fontSize: 20.0),
-                    )
-                  ],
+              SizedBox(
+                height: 20.0,
+                width: 200.0,
+                child: Divider(
+                  color: Colors.white,
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.mail,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
-                      'ga_missoumi@esi.dz',
-                      style: TextStyle(
-                          color: Colors.teal.shade800, fontSize: 20.0),
-                    )
-                  ],
+                child: ListTile(
+                  title: Text(
+                    '+213667099897',
+                    style:
+                        TextStyle(color: Colors.teal.shade800, fontSize: 20.0),
+                  ),
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: ListTile(
+                  title: Text(
+                    'ga_missoumi@esi.dz',
+                    style:
+                        TextStyle(color: Colors.teal.shade800, fontSize: 20.0),
+                  ),
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal,
+                  ),
                 ),
               )
             ],
